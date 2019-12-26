@@ -98,6 +98,8 @@ def _impl(repository_ctx):
         """
 _mapping = {mapping}
 
+all_dependencies = _mapping.values()
+
 def dependency(name):
     if name not in _mapping:
         fail("%s is not present in pyproject.toml" % name)
